@@ -427,6 +427,17 @@
 #X connect 40 0 41 0;
 #X connect 41 0 42 0;
 #X restore 38 267 pd page4;
+#N canvas 53 0 637 676 page5 0;
+#X obj 14 10 r \$0-message;
+#X obj 14 73 list trim;
+#X obj 14 94 s MMP;
+#X obj 14 52 list prepend playhead;
+#X obj 14 31 route playhead;
+#X connect 0 0 4 0;
+#X connect 1 0 2 0;
+#X connect 3 0 1 0;
+#X connect 4 0 3 0;
+#X restore 38 293 pd page5;
 #X connect 0 0 1 0;
 #X connect 1 0 3 0;
 #X connect 2 0 0 0;

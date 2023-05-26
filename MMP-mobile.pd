@@ -118,5 +118,14 @@
 #X connect 2 0 0 0;
 #X connect 3 0 2 0;
 #X restore 30 214 pd pag4;
+#N canvas 771 235 450 300 pag5 0;
+#X obj 16 97 send toNetwork;
+#X obj 16 19 r \$0-gui;
+#X obj 16 45 route /playhead;
+#X obj 16 71 list prepend /playhead;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 0 0;
+#X restore 30 240 pd pag5;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
