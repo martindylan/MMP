@@ -57,7 +57,7 @@
 #X connect 14 0 11 0;
 #X connect 15 0 0 0;
 #X restore 30 162 pd pag2;
-#N canvas 707 155 639 505 pag3 0;
+#N canvas 894 179 639 505 pag3 1;
 #X obj 7 86 send toNetwork;
 #X obj 7 8 r \$0-gui;
 #X obj 446 200 send toNetwork;
@@ -85,8 +85,7 @@
 #X obj 127 148 route /knobRight;
 #X msg 127 174 list /knobRight \$1;
 #X msg 277 174 list /toggles2x1 \$1 \$3;
-#X msg 7 60 list /tableBig \$1 \$2 \$3 \$4 \$5 \$6 \$7 \$8 \$9 \$10
-\$11 \$12 \$13 \$14, f 61;
+#X obj 7 60 list prepend /tableBig;
 #X connect 1 0 8 0;
 #X connect 3 0 18 0;
 #X connect 5 0 20 0;
@@ -109,7 +108,7 @@
 #X connect 26 0 15 0;
 #X connect 27 0 0 0;
 #X restore 30 188 pd pag3;
-#N canvas 771 235 450 300 pag4 0;
+#N canvas 159 243 450 300 pag4 1;
 #X obj 16 97 send toNetwork;
 #X obj 16 19 r \$0-gui;
 #X obj 16 71 list prepend /multiTouch;
@@ -143,8 +142,8 @@
 #X obj 16 299 list prepend /playhead1;
 #X obj 16 377 route /playToggles1;
 #X msg 16 403 list /playToggles1 \$1 \$2 \$3;
-#X obj 255 175 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 255 175 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X obj 166 45 route /playSlider0;
 #X obj 326 45 route /playSlider1;
 #X obj 166 71 list prepend /playSlider0;
