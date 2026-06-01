@@ -27,7 +27,7 @@
 #X connect 5 0 0 0;
 #X connect 7 0 6 0;
 #X restore 30 136 pd pag1;
-#N canvas 707 155 639 505 pag2 0;
+#N canvas 707 155 639 505 pag2 1;
 #X obj 7 86 send toNetwork;
 #X obj 7 8 r \$0-gui;
 #X obj 7 34 route /tableSmall;
@@ -43,7 +43,7 @@
 #X obj 177 122 r \$0-gui;
 #X obj 177 148 route /sliderBig;
 #X msg 177 174 list /sliderBig \$1;
-#X msg 7 60 list /tableSmall \$1 \$2 \$3 \$4 \$5 \$6 \$7 \$8;
+#X obj 7 60 list prepend tableSmall;
 #X connect 1 0 2 0;
 #X connect 2 0 15 0;
 #X connect 4 0 5 0;
@@ -57,7 +57,7 @@
 #X connect 14 0 11 0;
 #X connect 15 0 0 0;
 #X restore 30 162 pd pag2;
-#N canvas 894 179 639 505 pag3 1;
+#N canvas 894 179 639 505 pag3 0;
 #X obj 7 86 send toNetwork;
 #X obj 7 8 r \$0-gui;
 #X obj 446 200 send toNetwork;
